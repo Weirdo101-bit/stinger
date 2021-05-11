@@ -8,7 +8,8 @@ sender = "pytania@greenstar.net.pl"
 password="Ug1nzMMj($X\SQ{0zO@X`}WpP"
 reciver="ksiazki@greenstar.net.pl"
 subject= datetime.today()
-f=open("log.txt","r")
+path='log.txt'
+f=open(path,"r")
 mess=f.read()
 
 message="""Subject: {}
@@ -17,7 +18,7 @@ message="""Subject: {}
 
 {}
 
-""".format(subject,f)
+""".format(subject,mess)
 context = ssl.create_default_context()
 
 with smtplib.SMTP_SSL(smtp, port, context=context) as server:
